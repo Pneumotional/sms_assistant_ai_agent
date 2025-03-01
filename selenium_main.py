@@ -19,11 +19,11 @@ def get_policy_info(search_query: str) -> str:
         driver = webdriver.Chrome(options=options)
 
         # Login process
-        driver.get("https://gisa.bedrockinsurance.com.gh/")
+        driver.get("url_here")
         WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.ID, "user_email"))
-        ).send_keys("BABANKWA")
-        driver.find_element(By.ID, "user_password").send_keys("B1r2i3g4h5t6@123.com")
+        ).send_keys("username_here")
+        driver.find_element(By.ID, "user_password").send_keys("password_here")
         driver.find_element(By.NAME, "commit").click()
 
         # Navigate and search
